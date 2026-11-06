@@ -8,6 +8,8 @@ This repository hosts shared Renovate configuration used by other repositories. 
 - Don't commit secrets, tokens, or real config values.
 - Be cautions; changes to this repo affect Renovate behaviour in other repositories.
 - Keep changes scoped to the task. No drive-by refactors or renames.
+- Consumers pin a release tag, so a change only reaches them once released. Choose the PR title's conventional commit type by the version bump rules in `docs/adr/0002`; removing or weakening a rule is a breaking change.
+- Shipping updates (see `GLOSSARY.md`) must stay `fix` commits; see `docs/adr/0001` before touching those rules.
 
 ## Agent skills
 

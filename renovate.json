@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    "customManagers:githubActionsVersions"
+  ],
+  "packageRules": [
+    {
+      "description": "Validator and workflow updates change nothing a Consumer receives, so they land weekly as chore commits and automerge once validate passes; see docs/adr/0002",
+      "matchManagers": ["github-actions", "custom.regex"],
+      "matchUpdateTypes": ["minor", "patch", "digest", "pinDigest"],
+      "schedule": ["before 6am on monday"],
+      "automerge": true
+    }
+  ]
+}
