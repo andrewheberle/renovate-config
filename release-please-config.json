@@ -5,7 +5,6 @@
   "pull-request-title-pattern": "chore(release): v${version}",
   "packages": {
     ".": {
-      "release-as": "1.0.0",
       "extra-files": [
         "README.md"
       ]
