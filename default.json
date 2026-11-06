@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "description": "Base image updates ship as patch releases",
+      "matchManagers": ["dockerfile"],
+      "matchDepTypes": ["final"],
+      "semanticCommitType": "fix",
+      "schedule": ["before 6am on monday"],
+      "automerge": true
+    },
+    {
+      "description": "Go toolchain updates ship as releases, like base image updates",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["toolchain"],
+      "matchPackageNames": ["go"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Go toolchain patch updates carry security fixes, so they automerge once build passes",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["toolchain"],
+      "matchPackageNames": ["go"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
+  ]
+}
