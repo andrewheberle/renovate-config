@@ -6,7 +6,7 @@
   ],
   "packageRules": [
     {
-      "description": "Base image updates ship as patch releases",
+      "description": "Base image updates are shipping updates, so they ship as patch releases; see https://github.com/andrewheberle/renovate-config/blob/main/docs/adr/0001-shipping-updates-are-fix-commits.md",
       "matchManagers": ["dockerfile"],
       "matchDepTypes": ["final"],
       "semanticCommitType": "fix",
@@ -14,18 +14,25 @@
       "automerge": true
     },
     {
-      "description": "Go toolchain updates ship as releases, like base image updates",
+      "description": "Go toolchain updates are shipping updates, like base image updates; see https://github.com/andrewheberle/renovate-config/blob/main/docs/adr/0001-shipping-updates-are-fix-commits.md",
       "matchManagers": ["gomod"],
       "matchDepTypes": ["toolchain"],
       "matchPackageNames": ["go"],
       "semanticCommitType": "fix"
     },
     {
-      "description": "Go toolchain patch updates carry security fixes, so they automerge once build passes",
+      "description": "Go toolchain patch updates carry security fixes, so they automerge once build passes; see https://github.com/andrewheberle/renovate-config/blob/main/docs/adr/0001-shipping-updates-are-fix-commits.md",
       "matchManagers": ["gomod"],
       "matchDepTypes": ["toolchain"],
       "matchPackageNames": ["go"],
       "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "description": "Shared preset bumps are not shipping updates; minor and patch bumps automerge, major bumps wait for a person; see https://github.com/andrewheberle/renovate-config/blob/main/docs/adr/0002-consumed-by-tag-released-by-release-please.md",
+      "matchManagers": ["renovate-config"],
+      "matchPackageNames": ["andrewheberle/renovate-config"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     }
   ]
