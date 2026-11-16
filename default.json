@@ -4,6 +4,9 @@
     "config:recommended",
     ":semanticCommits"
   ],
+  "postUpdateOptions": [
+		"gomodTidy"
+	],
   "packageRules": [
     {
       "description": "Base image updates are shipping updates, so they ship as patch releases; see https://github.com/andrewheberle/renovate-config/blob/main/docs/adr/0001-shipping-updates-are-fix-commits.md",
