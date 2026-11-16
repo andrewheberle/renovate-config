@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/andrewheberle/renovate-config/compare/v1.0.0...v1.0.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* **default:** run go mod tidy after updates ([#6](https://github.com/andrewheberle/renovate-config/issues/6)) ([038c526](https://github.com/andrewheberle/renovate-config/commit/038c5268216dcd32b4396880f8156c89a5311820))
+
 ## 1.0.0 (2026-11-06)
 
 
