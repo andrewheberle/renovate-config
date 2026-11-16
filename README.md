@@ -10,7 +10,7 @@ To use the configuration in another repository add the following in the Renovate
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>andrewheberle/renovate-config#v1.0.0"]
+  "extends": ["github>andrewheberle/renovate-config#v1.0.1"]
 }
 ```
 <!-- x-release-please-end -->
