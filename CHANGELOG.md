@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/andrewheberle/renovate-config/compare/v1.0.1...v1.1.0) (2026-11-22)
+
+
+### Features
+
+* add emdash preset for EmDash sites ([#8](https://github.com/andrewheberle/renovate-config/issues/8)) ([63cf988](https://github.com/andrewheberle/renovate-config/commit/63cf988d2a49ded979a337159b3913e78ff8b9a7))
+
 ## [1.0.1](https://github.com/andrewheberle/renovate-config/compare/v1.0.0...v1.0.1) (2026-11-16)
 
 

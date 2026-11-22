@@ -10,7 +10,7 @@ To use the configuration in another repository add the following in the Renovate
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>andrewheberle/renovate-config#v1.0.1"]
+  "extends": ["github>andrewheberle/renovate-config#v1.1.0"]
 }
 ```
 <!-- x-release-please-end -->
@@ -22,8 +22,8 @@ An EmDash site also extends the `emdash` preset, which turns off Renovate update
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>andrewheberle/renovate-config#v1.0.1",
-    "github>andrewheberle/renovate-config:emdash#v1.0.1"
+    "github>andrewheberle/renovate-config#v1.1.0",
+    "github>andrewheberle/renovate-config:emdash#v1.1.0"
   ]
 }
 ```
