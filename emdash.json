@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "EmDash packages are upgraded by upgrade-emdash, not Renovate. Requires the Consumer's EmDash upgrade workflow; without it EmDash never updates; see https://github.com/andrewheberle/renovate-config/blob/main/docs/adr/0003-emdash-updates-bypass-renovate.md",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["emdash", "@emdash-cms/**"],
+      "groupName": "EmDash",
+      "enabled": false
+    }
+  ]
+}
